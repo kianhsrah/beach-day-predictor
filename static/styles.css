@@ -63,7 +63,7 @@ body {
     border: none;
     outline: none;
     border-radius: 40px;
-    background: #9b2fc2;
+    background: #2f7dc2;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -72,7 +72,7 @@ body {
 }
 
 .wrapper .btn:hover {
-    background: #8204a1;
+    background: #0448a1;
 }
 
 .wrapper .signup-link {
