@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Results for {{ city }}, {{ state }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Weather Results for {{ city }}, {{ state }}</h1>
+        <div class="weather-container">
+            <div class="weather-box">
+                <h2>Today</h2>
+                <pre>{{ current_weather }}</pre>
+                <p>UV Index: {{ uv_today }}</p>
+                <p class="bold-underline">Beach day rating: {{ stars_today }} / ⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="weather-box">
+                <h2>Tomorrow</h2>
+                <pre>{{ next_weather }}</pre>
+                <p>UV Index: {{ uv_tomorrow }}</p>
+                <p class="bold-underline">Beach day rating: {{ stars_tomorrow }} / ⭐⭐⭐⭐⭐</p>
+            </div>
+        </div>
+        <div class="signup-link">
+            <a href="/">Back</a>
+        </div>
+    </div>
+</body>
+</html>
