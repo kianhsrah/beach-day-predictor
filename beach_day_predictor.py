@@ -6,6 +6,7 @@ import os
 # Load environment variables from .env file
 load_dotenv()
 
+# Use PyZipCode to get ZIP code for a city and state
 def get_zipcode(city, state):
     zcdb = ZipCodeDatabase()
     formatted_city = city.replace(" ", "_")
@@ -17,6 +18,7 @@ def get_zipcode(city, state):
     else:
         return f"No ZIP code found for {city}, {state}"
 
+# Use OpenCage Geocoding API to get latitude and longitude for a ZIP code
 def get_lat_lon(zip_code, geocoding_api_key):
     base_url = "https://api.opencagedata.com/geocode/v1/json"
     params = {
@@ -32,6 +34,7 @@ def get_lat_lon(zip_code, geocoding_api_key):
     else:
         return None, None
 
+# Use OpenWeatherMap API to get current and next day's weather data
 def get_weather_data(lat, lon, weather_api_key):
     base_url = "http://api.openweathermap.org/data/3.0/onecall"
     params = {
